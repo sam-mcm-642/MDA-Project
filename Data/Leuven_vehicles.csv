@@ -1,0 +1,9 @@
+type,latitude,longitude,city,province,region,geometry
+ambulance,50.8696549,4.7243436,Leuven,Flemish Brabant,Flanders,POINT (4.7243436 50.8696549)
+ambulance,50.8785355,4.6953981,Leuven,Flemish Brabant,Flanders,POINT (4.6953981 50.8785355)
+ambulance,50.8774603,4.6658621,Leuven,Flemish Brabant,Flanders,POINT (4.6658621 50.8774603)
+ambulance,50.8723536,4.6998331,Leuven,Flemish Brabant,Flanders,POINT (4.6998331 50.8723536)
+ambulance,50.8780791,4.6731993,Leuven,Flemish Brabant,Flanders,POINT (4.6731993 50.8780791)
+pit,50.872546,4.69973,Leuven,Antwerp,Flanders,POINT (4.69973 50.872546)
+pit,50.8797737,4.6756415,Leuven,Flemish Brabant,Flanders,POINT (4.6756415 50.8797737)
+mug,50.8790552,4.6717377,Leuven,Flemish Brabant,Flanders,POINT (4.6717377 50.8790552)
