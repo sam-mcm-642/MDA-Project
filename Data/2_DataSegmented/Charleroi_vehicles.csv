@@ -1,0 +1,9 @@
+type,latitude,longitude,city,province,region,geometry
+ambulance,50.4179964,4.4745926,Charleroi,Hainaut,Wallonia,POINT (4.4745926 50.4179964)
+ambulance,50.412614,4.3768883,Charleroi,Hainaut,Wallonia,POINT (4.3768883 50.412614)
+ambulance,50.45531,4.45141,Charleroi,Hainaut,Wallonia,POINT (4.45141 50.45531)
+ambulance,50.3906081,4.4173694,Charleroi,Hainaut,Wallonia,POINT (4.4173694 50.3906081)
+pit,50.4174263,4.4811755,Charleroi,Hainaut,Wallonia,POINT (4.4811755 50.4174263)
+mug,50.4739672,4.4279237,Charleroi,Hainaut,Wallonia,POINT (4.4279237 50.4739672)
+mug,50.4179153,4.4539194,Charleroi,Hainaut,Wallonia,POINT (4.4539194 50.4179153)
+mug,50.4311719,4.4402722,Charleroi,Hainaut,Wallonia,POINT (4.4402722 50.4311719)

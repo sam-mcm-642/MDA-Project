@@ -1,0 +1,5 @@
+type,latitude,longitude,city,province,region,geometry
+ambulance,51.2691894,3.2073533,Brugge,West Flanders,Flanders,POINT (3.2073533 51.2691894)
+ambulance,51.2217871,3.2272175,Brugge,West Flanders,Flanders,POINT (3.2272175 51.2217871)
+pit,51.2201147,3.1934588,Brugge,West Flanders,Flanders,POINT (3.1934588 51.2201147)
+mug,51.2201147,3.1934588,Brugge,West Flanders,Flanders,POINT (3.1934588 51.2201147)
