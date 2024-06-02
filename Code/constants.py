@@ -9,7 +9,7 @@ possible_locations_path = "/2_PossibleLocations"
 optimal_indicators_path = "/3_OptimalIndicators"
 app_path = "/4_DataApp"
 
-GOOGLE_API_KEY = "AIzaSyAxfHDWbGY-RNCky0QA0Kgr24xtDHhSa6c"
+GOOGLE_API_KEY = ""
 gmaps = googlemaps.Client(key = GOOGLE_API_KEY)
 
 cardiac_codes = ["P003", "P011", "P039"]
