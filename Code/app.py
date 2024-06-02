@@ -5,7 +5,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import math
-import unicodedata
 import googlemaps
 
 # Read Mapbox access token
@@ -20,11 +19,11 @@ with open("googlemaps_token.txt") as f:
 gmaps = googlemaps.Client(key=googlemaps_token)
 
 # Load the CSV files
-data_path = "/Users/Jovan/Desktop/MDA-Project/Data/"
+data_path = "C:/Users/hussa/OneDrive - KU Leuven/Master 1/Semester 2/Modern Data Analytics/Project/MDA-Project/Data"
 
-df_app = pd.read_csv("/4_DataApp/app_data.csv")
+df_app = pd.read_csv(data_path + "/4_DataApp/app_data.csv")
 df_cards = pd.read_csv(data_path + "/cards_with_density.csv")
-df_coverage = pd.read_csv("/4_DataApp/coverage.csv")
+df_coverage = pd.read_csv(data_path + "/4_DataApp/coverage.csv")
 
 # Replace "Lige" with "Liège" after applying the function
 df_app['city'] = df_app['city'].replace("Liege", "Liège")
@@ -111,7 +110,7 @@ app.layout = html.Div([
 
 
 
-# Define callback to update the map and coverage based on the selected city, visualization, and buffer radius
+# Callback to update the map and coverage based on the selected city, visualization, and buffer radius
 @app.callback(
     [Output('map-graph', 'figure'), Output('coverage-header', 'children'), Output('old-coverage', 'children'), Output('new-coverage', 'children')],
     [Input('city-dropdown', 'value'), Input('visualization-selector', 'value'), Input('buffer-radius-slider', 'value'), Input('map-graph', 'clickData')]
@@ -150,8 +149,8 @@ def update_map(selected_city, selected_visualizations, buffer_radius, clickData)
                     marker=dict(
                         size=2,
                         color='rgba(0, 0, 255, 0.2)',
-                        symbol='circle',  # Symbol type for the scatter plot
-                        opacity=0.2,  # Set opacity for the circles
+                        symbol='circle',  
+                        opacity=0.2,  
                         
                     ),
                     showlegend=False
@@ -206,7 +205,7 @@ def update_map(selected_city, selected_visualizations, buffer_radius, clickData)
         aed_lon = closest_aed['aed_lon']
         distance = closest_aed['distance']
 
-        # Fetch the walking route from the cardiac arrest point to the closest AED using Google Maps Directions API
+        # Get the walking route from the cardiac arrest point to the closest AED using Google Maps Directions API
         directions_result = gmaps.directions(
             (clicked_lat, clicked_lon),
             (aed_lat, aed_lon),
