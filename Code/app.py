@@ -22,7 +22,7 @@ gmaps = googlemaps.Client(key=googlemaps_token)
 data_path = "C:/Users/hussa/OneDrive - KU Leuven/Master 1/Semester 2/Modern Data Analytics/Project/MDA-Project/Data"
 
 df_app = pd.read_csv(data_path + "/4_DataApp/app_data.csv")
-df_cards = pd.read_csv(data_path + "/cards_with_density.csv")
+df_cards = pd.read_csv(data_path + "/4_DataApp/cards_with_density.csv")
 df_coverage = pd.read_csv(data_path + "/4_DataApp/coverage.csv")
 
 # Replace "Lige" with "Liège" after applying the function

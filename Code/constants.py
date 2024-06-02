@@ -1,3 +1,5 @@
+from libraries import *
+
 data_path = "/Users/Jovan/Desktop/MDA-Project/Data"
 belgium_polygons_path = "/BelgiumUrbanPolygons/BE_STATBEL_SH_SU_UA_CITY_2019_v60.gpkg"
 
@@ -7,7 +9,8 @@ possible_locations_path = "/2_PossibleLocations"
 optimal_indicators_path = "/3_OptimalIndicators"
 app_path = "/4_DataApp"
 
-GOOGLE_API_KEY = ""
+GOOGLE_API_KEY = "AIzaSyAxfHDWbGY-RNCky0QA0Kgr24xtDHhSa6c"
+gmaps = googlemaps.Client(key = GOOGLE_API_KEY)
 
 cardiac_codes = ["P003", "P011", "P039"]
 cities = ["Antwerpen", "Brugge", "Brussels", "Charleroi", "Gent", "Leuven", "Liege", "Oostende"]

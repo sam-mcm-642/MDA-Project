@@ -1,4 +1,5 @@
 from libraries import * 
+from constants import *
 
 # Inserts a decimal on position k
 def insert_decimal(number, k):
@@ -105,6 +106,29 @@ def replace_1_with_distances(flag_matrix):
                 flag_matrix.iat[i, j] = calculate_distance(flag_matrix.index[i], flag_matrix.columns[j])
 
     return flag_matrix
+
+
+# Calculates cost matrix for given sets of cards and aeds
+def get_cost_matrix(cards, aeds, city, num_closest_aeds):
+    distance_matrix = cdist(cards[city], aeds[city], metric = 'euclidean')  # Transposed
+    flag_matrix = np.zeros_like(distance_matrix)
+
+    for row in range(distance_matrix.shape[0]):
+        row_indices = np.argsort(distance_matrix[row, :])[:num_closest_aeds]
+        flag_matrix[row, row_indices] = 1
+
+    # Column names
+    cards_str = cards[city].apply(lambda x: f"{x['latitude']}, {x['longitude']}", axis = 1)
+    flag_matrix = pd.DataFrame(flag_matrix, index = cards_str, columns = aeds[city].apply(tuple, axis = 1))
+    flag_matrix.replace(0, INF_LENGTH, inplace=True)
+
+    confirmation = input(f"This will initialize {len(flag_matrix) * num_closest_aeds} API requests. Are you sure? (yes/no): ")
+    if confirmation == "yes":            
+        # Replace all marked cells with real calculated distances
+        return(replace_1_with_distances(flag_matrix))
+    else:
+        print("OK. Will not procced.\n")
+        return(np.zeros_like(flag_matrix))
 
 # Converts any format of coordinates into a tuple
 def make_coordinates_tuple(s):
